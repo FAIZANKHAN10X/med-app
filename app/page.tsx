@@ -22,7 +22,7 @@ function SkeletonCard() {
         <div className="h-3 w-28 bg-slate-100 rounded-md animate-pulse" />
         <div className="h-3 w-16 bg-slate-100 rounded-md animate-pulse" />
       </div>
-      <div className="h-10 w-[72px] bg-slate-100 rounded-full animate-pulse shrink-0" />
+      <div className="h-10 w-18 bg-slate-100 rounded-full animate-pulse shrink-0" />
     </div>
   );
 }

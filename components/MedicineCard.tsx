@@ -13,19 +13,13 @@ function MedicineCardBase({ medicine }: { medicine: Medicine }) {
     <div className="flex items-center justify-between gap-3 px-4 py-3.5 bg-white border-b border-slate-100 active:bg-slate-50 transition-colors">
       <div className="flex-1 min-w-0">
         <h3 className="font-medium text-slate-900 truncate">{medicine.name}</h3>
+
         <p className="text-sm text-slate-500 truncate">
           {medicine.strength} · {medicine.company}
         </p>
+
         <div className="flex items-center gap-2 mt-1">
           <span className="text-xs text-slate-400">{medicine.category}</span>
-          {medicine.price != null && (
-            <>
-              <span className="text-slate-300">•</span>
-              <span className="text-xs font-semibold text-slate-700">
-                ₹{medicine.price}
-              </span>
-            </>
-          )}
         </div>
       </div>
 
@@ -47,9 +41,11 @@ function MedicineCardBase({ medicine }: { medicine: Medicine }) {
             >
               <Minus size={16} />
             </button>
+
             <span className="w-7 text-center text-sm font-semibold text-blue-900 tabular-nums">
               {quantity}
             </span>
+
             <button
               onClick={() => addItem(medicine)}
               className="w-10 h-10 flex items-center justify-center text-blue-600 active:bg-blue-100 rounded-r-full"
