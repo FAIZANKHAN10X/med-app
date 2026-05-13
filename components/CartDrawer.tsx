@@ -232,14 +232,6 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   {totalItems}
                 </span>
               </div>
-              <div className="flex justify-between text-sm py-1">
-                <span className="text-[var(--color-ink-500)]">
-                  Estimated delivery
-                </span>
-                <span className="font-semibold text-[var(--color-ink-900)]">
-                  ~30 min
-                </span>
-              </div>
             </div>
           )}
         </div>
@@ -265,8 +257,9 @@ export function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             </div>
             <button
               onClick={handleClear}
-              className="w-full text-center text-sm text-[var(--color-ink-500)] active:text-[var(--color-danger)] py-2 transition-colors"
+              className="w-full flex items-center justify-center gap-2 h-11 rounded-full bg-red-50 text-red-600 font-semibold border border-red-100 active:bg-red-100 active:scale-[0.98] transition-all"
             >
+              <Trash2 size={16} />
               Clear cart
             </button>
           </div>
