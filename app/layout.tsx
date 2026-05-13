@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#fafbfc",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -36,12 +36,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased bg-slate-100">
+      <body className="font-sans antialiased" style={{ background: "#eef1f5" }}>
         <main
-          className="mx-auto min-h-dvh max-w-md bg-white relative flex flex-col shadow-xl shadow-slate-900/5"
+          className="mx-auto min-h-dvh max-w-md relative flex flex-col"
           style={{
+            background: "var(--color-bg)",
             paddingTop: "var(--safe-top)",
             paddingBottom: "var(--safe-bottom)",
+            boxShadow: "0 0 60px -10px rgba(11,18,32,.08)",
           }}
         >
           {children}
